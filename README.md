@@ -1,70 +1,169 @@
-# Getting Started with Create React App
+# Weather App — COMP3123 Lab Test 2
+Student: Hetvi Patel  
+Student ID: 10158910  
+Project Name: 101508910_comp3123_labtest2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+------------------------------------------------------------
 
-## Available Scripts
+## Project Overview
+This project is a simple React Weather App that allows users to search for any city and view:
 
-In the project directory, you can run:
+- Current weather conditions
+- Temperature
+- Weather description and icon
+- 5-day forecast
+- Forecast humidity and wind speed
 
-### `npm start`
+The application uses the OpenWeatherMap API and demonstrates React concepts such as state, props, hooks, and component-based design.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+------------------------------------------------------------
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live Demo (Vercel Deployment)
+URL: (https://101508910comp3123labtest2vercel.vercel.app/)
 
-### `npm test`
+------------------------------------------------------------
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+### Current Weather
+- City name
+- Date (weekday, month, year)
+- Temperature in Celsius
+- Weather description
+- Weather icon
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 5-Day Forecast
+- Daily weather icon
+- Minimum and maximum temperature
+- Weather description
+- Humidity percentage
+- Wind speed (km/h)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Search Functionality
+- Search by any city name
+- Displays updated current weather and forecast
+- Error handling for invalid or unknown cities
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### UI/UX
+- Clean and simple layout
+- Glass-style card design
+- Responsive grid layout
 
-### `npm run eject`
+------------------------------------------------------------
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used
+- React
+- Axios (API fetching)
+- OpenWeatherMap API
+- CSS for styling
+- Vercel for deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+------------------------------------------------------------
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Endpoints Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Current Weather
+```
+https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric
+```
 
-## Learn More
+### 5-Day Forecast
+```
+https://api.openweathermap.org/data/2.5/forecast?q={city}&appid={API_KEY}&units=metric
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+------------------------------------------------------------
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Project Structure
 
-### Code Splitting
+```
+project-root/
+│
+├── public/
+│   ├── index.html
+│   └── background.jpg
+│
+├── src/
+│   ├── components/
+│   │   ├── SearchBar.jsx
+│   │   ├── CurrentWeather.jsx
+│   │   └── Forecast.jsx
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   └── index.js
+│
+├── .env
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+------------------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Installation and Setup
 
-### Making a Progressive Web App
+1. Clone the repository:
+```
+   git clone https://github.com/hetvi0305/101508910_comp3123_labtest2.git
+   cd 101508910_comp3123_labtest2
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3. Install dependencies:
+```
+   npm install
+```
 
-### Advanced Configuration
+4. Create a .env file in the project root and add:
+```
+   REACT_APP_WEATHER_KEY=your_api_key_here
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+5. Start the development server:
+```
+   npm start
+```
 
-### Deployment
+------------------------------------------------------------
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Deployment (Vercel)
 
-### `npm run build` fails to minify
+1. Push project to GitHub
+2. Log into Vercel (via GitHub)
+3. Click "New Project" and import your repo
+4. Add environment variable:
+```
+    REACT_APP_WEATHER_KEY = your_api_key_here
+```
+5. Click "Deploy"
+6. Copy the public URL and add it in this README
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+------------------------------------------------------------
+
+## Screenshots
+- Current weather screen:
+  <img width="1919" height="973" alt="Screenshot 2025-11-27 114958" src="https://github.com/user-attachments/assets/d79148b1-07e5-4bab-97dc-a9aac9e01895" />
+
+- Different City screen:
+  <img width="1919" height="973" alt="Screenshot 2025-11-27 115015" src="https://github.com/user-attachments/assets/6f647b59-fccc-46cc-9f2b-02a0b549dd78" />
+
+- Invalid City validation:
+  <img width="1919" height="969" alt="Screenshot 2025-11-27 115212" src="https://github.com/user-attachments/assets/0400b4a5-5c6f-4ef4-9a77-1a6c11c9ea62" />
+  <img width="1918" height="968" alt="Screenshot 2025-11-27 115234" src="https://github.com/user-attachments/assets/19ce23d4-e418-43ef-9fbd-f93045760444" />
+
+------------------------------------------------------------
+
+## Notes
+- Uses metric units (°C)
+- Requires a valid OpenWeatherMap API key
+- The .env file is not included in GitHub for security reasons
+
+------------------------------------------------------------
+
+## Submission Checklist
+- GitHub repository created
+- React project running
+- OpenWeatherMap API integrated
+- README file added
+- Vercel deployment completed
+- Screenshots included
